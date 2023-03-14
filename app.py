@@ -124,7 +124,7 @@ t5 = [datetime.datetime.fromtimestamp(ts) for ts in t5]
 t6 = [datetime.datetime.fromtimestamp(ts) for ts in t6]
 # Create the Dash app
 app = dash.Dash()
-
+server = app.server
 # Define the layout of the app
 app.layout = html.Div(children=[
     html.H1(children='Massa Dashboard'),
