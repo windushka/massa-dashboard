@@ -143,12 +143,6 @@ app.layout = html.Div(children=[
                     mode='lines',
                     name='Stakers'
                 ),
-                go.Scatter(
-                    x=t,
-                    y=ma(txps, ma_size),
-                    mode='lines',
-                    name='Transactions/sec'
-                ),
             ],
             'layout': go.Layout(
                 xaxis={'title': 'Time'},
@@ -158,6 +152,29 @@ app.layout = html.Div(children=[
                 hovermode='closest'
             )
         }
+    ),
+
+    html.Div(children='''
+        Transactions/sec
+    '''),
+    
+    dcc.Graph(
+        id='txs-graph',
+        figure={
+            'data': [
+                go.Scatter(
+                    x=t,
+                    y=ma(txps, ma_size),
+                    mode='lines',
+                    name='Transactions/sec'
+                ),
+            ],
+            'layout': go.Layout(
+            title='Transactions/sec',
+            xaxis={'title': 'Time'},
+            yaxis={'title': 'Transactions/sec'}
+        )
+    }
     ),
 
     html.Div(children='''
