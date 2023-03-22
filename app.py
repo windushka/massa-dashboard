@@ -294,11 +294,6 @@ def get_y_blocks_sec():
 # Create the Dash app
 app = dash.Dash()
 server = app.server
-# Define the layout of the app
-
-app = dash.Dash()
-
-# create the options for the dropdown menu
 dropdown_options = [
     {'label': 'Txps', 'value': 'txps'},
     {'label': 'Stakers', 'value': 'stakers'},
