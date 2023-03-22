@@ -332,8 +332,7 @@ episode_options = [
     {'label': 'Episode 6', 'value': 'ep6'},
 ]
 
-def layout():
-    return html.Div([
+app.layout = html.Div([
     html.Label('Select graphs to display or compare:'),
     dcc.Dropdown(
         id='dropdown',
@@ -414,8 +413,6 @@ def update_graph(selected_values, episode_values):
             if value == 'downbandwidth':
                 data.append({'x': get_x_downbandwidth(), 'y': get_y_downbandwidth(), 'type': 'scatter', 'name': 'Down Bandwidth Usage', 'hovertemplate': '%{x|%Y-%m-%d %H:%M:%S}: %{y:.2f} MB/sec'})
     return {'data': data}
-
-app.layout = layout
 
 if __name__ == '__main__':
     app.run_server(debug=True)
