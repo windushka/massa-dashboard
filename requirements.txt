@@ -12,7 +12,6 @@ dash-html-components==2.0.0
 dash-table==5.0.0
 docopt==0.6.2
 Flask==2.2.3
-fonttools==4.39.0
 gunicorn==20.1.0
 idna==3.4
 itsdangerous==2.1.2
